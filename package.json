@@ -1,0 +1,15 @@
+{
+  "name": "portfolioprofessional",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "mysass": "node-sass sass/style.scss css/main.css -w"
+  },
+  "author": "Alberto Pacheco",
+  "license": "MIT",
+  "devDependencies": {
+    "node-sass": "^4.9.4"
+  }
+}

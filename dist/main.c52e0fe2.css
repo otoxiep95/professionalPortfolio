@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css?family=Cousine:400,400i,700,700i");
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0%;
+  background-color: #f3f7ff;
+  font-family: "Cousine", monospace; }
+
+.gallery {
+  display: grid;
+  width: 50vw;
+  right: 0;
+  left: 0;
+  margin: auto;
+  margin-top: 10vh;
+  grid-template-columns: repeat(2, 25vw);
+  grid-auto-rows: 20vw;
+  grid-gap: 10px; }
+  .gallery .project {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    object-fit: contain;
+    transition: opacity 0.5s ease; }
+    .gallery .project .overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      right: 0;
+      opacity: 0;
+      transition: opacity 0.5s ease; }
+    .gallery .project:hover .overlay {
+      opacity: 1; }
+    .gallery .project:hover .overlay-txt {
+      opacity: 1; }
+    .gallery .project img {
+      width: 90%;
+      height: auto;
+      margin-top: 7%;
+      margin-left: 5%; }
+    .gallery .project .overlay-txt {
+      position: absolute;
+      width: 70%;
+      height: 10%;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      margin: auto;
+      transition: 0.5s ease;
+      opacity: 0;
+      color: white;
+      text-align: center; }
+      .gallery .project .overlay-txt h2 {
+        margin: 0%; }
+
+#logo_container img {
+  width: 60%;
+  height: auto;
+  margin-left: 20%;
+  margin-top: 15%;
+  margin-bottom: 0%; }
+
+#intro-text {
+  grid-column: 2/-1;
+  grid-row: 2; }
+
+.nav_link {
+  text-decoration: none;
+  color: black;
+  font-size: 1.8em; }
+
+.nav_link:hover {
+  text-decoration: line-through;
+  transition: all 1s; }
+
+#about_nav {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  position: fixed;
+  right: 2px;
+  top: calc(50vh - 2vh); }
+
+#contact_nav {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  position: fixed;
+  left: 2px;
+  top: 45vh; }
+
+.project-list {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding: 0;
+  overflow-y: scroll;
+  scroll-behavior: smooth; }
+  .project-list .project {
+    width: 100%;
+    height: 100vh;
+    position: relative; }
+  .project-list .title-container,
+  .project-list .img-container,
+  .project-list .txt-container {
+    border: blue solid 6px;
+    background: white;
+    box-shadow: 4px 5px 99px -28px rgba(48, 48, 48, 0.34); }
+  .project-list .img-container:hover {
+    z-index: 5; }
+
+.line-through {
+  text-decoration: line-through; }
