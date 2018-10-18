@@ -32,7 +32,7 @@ function buildGallery(data) {
         .querySelector(".project-img")
         .setAttribute(
           "src",
-          project._embedded["wp:featuredmedia"][0].media_details.sizes.full
+          project._embedded["wp:featuredmedia"][0].media_details.sizes.medium
             .source_url
         );
     } else {

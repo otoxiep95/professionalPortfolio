@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Cousine:400,400i,700,700i");
+* {
+  box-sizing: border-box; }
+
 body {
   width: 100%;
   height: 100%;
@@ -89,25 +92,174 @@ body {
   left: 2px;
   top: 45vh; }
 
-.project-list {
-  position: relative;
-  width: 100%;
+#home_link {
+  position: fixed;
+  top: 5vh;
+  left: 2vw; }
+
+.main-about {
+  width: 100vw;
   height: 100vh;
-  padding: 0;
+  margin: 0;
   overflow-y: scroll;
   scroll-behavior: smooth; }
-  .project-list .project {
-    width: 100%;
-    height: 100vh;
-    position: relative; }
-  .project-list .title-container,
-  .project-list .img-container,
-  .project-list .txt-container {
-    border: blue solid 6px;
-    background: white;
-    box-shadow: 4px 5px 99px -28px rgba(48, 48, 48, 0.34); }
-  .project-list .img-container:hover {
-    z-index: 5; }
+
+.about-me,
+.about-skills,
+.about-education {
+  width: 40vw;
+  height: 100vh; }
+
+.about-me h1,
+.about-skills h1,
+.about-education h1 {
+  padding-top: 30%;
+  margin-left: 30%; }
+
+.about-me div,
+.about-skills div {
+  margin-left: 30%;
+  padding-top: 20%; }
+
+.about-img {
+  position: fixed;
+  width: 30%;
+  transform: rotate(-90deg);
+  top: 25vh;
+  right: 15vw;
+  border: #3939c6 solid 6px;
+  box-shadow: 4px 5px 99px -28px rgba(48, 48, 48, 0.34); }
+
+/*EDUCATION TIMELINE*/
+.timeline {
+  position: relative;
+  width: 100%;
+  max-width: 1700px;
+  margin: 0 auto;
+  margin-left: 30%;
+  margin-top: 10%;
+  margin-bottom: 20%; }
+
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 50vh;
+  background-color: #3d6bc9;
+  top: 0;
+  bottom: 0;
+  left: 10%;
+  margin-left: -3px; }
+
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 90%; }
+
+/* The circles on the timeline */
+.container::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: #f3f7ff;
+  border: 4px solid #3939c6;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1; }
+
+.right {
+  left: 10%; }
+
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid black;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent black transparent transparent; }
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -16px; }
+
+.content {
+  padding: 0px 30px;
+  background-color: #f3f7ff;
+  position: relative;
+  border-radius: 6px; }
+
+.section-links {
+  position: fixed;
+  right: 6vw;
+  top: 16vh; }
+
+.section-links a {
+  display: block;
+  text-decoration: none;
+  color: #3939c6;
+  margin-bottom: 10px; }
+
+.section-links a:hover {
+  text-decoration: line-through; }
+
+.email-container {
+  width: 40vw;
+  margin-top: 20vh;
+  margin-left: 15%; }
+
+fieldset {
+  border: medium none !important;
+  margin: 0 0 10px;
+  min-width: 100%;
+  padding: 0;
+  width: 100%; }
+
+#contact {
+  background: #f3f7ff;
+  padding: 25px;
+  margin: 50px 0; }
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact input[type="tel"],
+#contact input[type="url"],
+#contact textarea {
+  width: 100%;
+  border: 1px solid blue;
+  background: #f3f7ff;
+  margin: 0 0 5px;
+  padding: 10px; }
+
+#contact button[type="submit"] {
+  cursor: pointer;
+  width: 30%;
+  background: #f3f7ff;
+  border: none;
+  margin: 0 0 5px;
+  padding: 10px;
+  font-size: 15px; }
+
+.soMe {
+  position: absolute;
+  right: 20vw;
+  width: 8vw;
+  height: auto; }
+
+#facebook-link {
+  top: 20vh; }
+
+#linkedin-link {
+  top: 40vh; }
+
+#github-link {
+  top: 60vh; }
 
 .line-through {
   text-decoration: line-through; }

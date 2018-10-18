@@ -132,7 +132,7 @@ function buildGallery(data) {
 
     if (project._embedded["wp:featuredmedia"]) {
       //img is there
-      clone.querySelector(".project-img").setAttribute("src", project._embedded["wp:featuredmedia"][0].media_details.sizes.full.source_url);
+      clone.querySelector(".project-img").setAttribute("src", project._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url);
     } else {
       // no img
       clone.querySelector("img").remove();
@@ -173,7 +173,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49356" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50109" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
