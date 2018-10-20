@@ -11,5 +11,8 @@
   "license": "MIT",
   "devDependencies": {
     "node-sass": "^4.9.4"
+  },
+  "dependencies": {
+    "animejs": "^2.2.0"
   }
 }
