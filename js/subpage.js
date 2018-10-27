@@ -9,7 +9,7 @@ const text = document.querySelector("main p");
 const projImg = document.querySelector("main img");
 const projMain = document.querySelector("main");
 
-window.addEventListener("DOMContentLoaded", init);
+//window.addEventListener("DOMContentLoaded", init);
 function init() {
   fetch(
     "https://professionalportfolio.albertopachecommd.com/wp-json/wp/v2/galleryproject/" +
@@ -32,5 +32,7 @@ function showSingleProject(data) {
     "src",
     data._embedded["wp:featuredmedia"][0].media_details.sizes.full.source_url
   );
+
   text.innerHTML = data.content.rendered;
 }
+init();

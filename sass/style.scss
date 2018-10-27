@@ -22,6 +22,7 @@ body {
   left: 0;
   margin: auto;
   margin-top: 10vh;
+  margin-bottom: 5vh;
   grid-template-columns: repeat(2, 30vw);
   grid-auto-rows: 20vw;
   grid-gap: 10px;
@@ -158,7 +159,7 @@ body {
 .about-skills,
 .about-education {
   width: 40vw;
-  height: 100vh;
+  height: auto;
 }
 
 .about-me h1,
@@ -310,17 +311,15 @@ fieldset {
 .soMe {
   position: absolute;
   right: 20vw;
-  width: 8vw;
+  width: 6vw;
   height: auto;
 }
-#facebook-link {
-  top: 20vh;
-}
+
 #linkedin-link {
-  top: 40vh;
+  top: 35vh;
 }
 #github-link {
-  top: 60vh;
+  top: 50vh;
 }
 
 //PROJECT SUBPAGE
@@ -328,7 +327,7 @@ fieldset {
 .project-main {
   width: 100vw;
   height: 100vh;
-  padding: 5%;
+  padding: 15%;
   padding-top: 10%;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -346,6 +345,13 @@ fieldset {
   p {
     grid-column: 1/6;
     font-size: 1.4rem;
+  }
+  a {
+    grid-row: 6;
+    margin-right: 10%;
+    img {
+      width: 60%;
+    }
   }
 }
 
@@ -365,6 +371,19 @@ fieldset {
 @media only screen and (max-width: 1200px) {
   :root {
     font-size: 40%;
+  }
+  .project-main {
+    font-size: 60%;
+    h1 {
+      font-size: 3.4rem;
+    }
+
+    h2 {
+      font-size: 2.2rem;
+    }
+    p {
+      font-size: 1.8rem;
+    }
   }
 }
 
@@ -398,6 +417,23 @@ fieldset {
     top: 80vh;
     right: 15vw;
   }
+
+  .project-main {
+    display: block;
+    padding: 15%;
+    text-align: center;
+    h1 {
+      margin-bottom: 8%;
+    }
+    h2 {
+      margin-bottom: 5%;
+    }
+    p {
+    }
+    .project-page-img {
+      margin-bottom: 10%;
+    }
+  }
 }
 
 @media only screen and (max-width: 725px) {
@@ -418,6 +454,8 @@ fieldset {
     }
   }
   #logo_container {
+    height: 80%;
+    margin-top: 15%;
     img {
       margin-top: 30%;
     }
@@ -460,6 +498,27 @@ fieldset {
       margin-left: 0;
     }
   }
+
+  .project-main {
+    display: block;
+    padding: 15%;
+    text-align: center;
+    h1 {
+      margin-bottom: 8%;
+      font-size: 5rem;
+    }
+    h2 {
+      font-size: 3rem;
+      margin-bottom: 5%;
+    }
+    p {
+      font-size: 2rem;
+    }
+    .project-page-img {
+      width: 60vw;
+      margin-bottom: 10%;
+    }
+  }
 }
 
 @media only screen and (max-width: 500px) {
@@ -478,5 +537,23 @@ fieldset {
 
   .nav_link {
     font-size: 2.8rem;
+  }
+
+  .project-main {
+    h1 {
+      margin-bottom: 8%;
+      font-size: 7rem;
+    }
+    h2 {
+      font-size: 5rem;
+      margin-bottom: 5%;
+    }
+    p {
+      font-size: 3rem;
+    }
+    .project-page-img {
+      width: 60vw;
+      margin-bottom: 10%;
+    }
   }
 }

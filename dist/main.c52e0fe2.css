@@ -20,6 +20,7 @@ body {
   left: 0;
   margin: auto;
   margin-top: 10vh;
+  margin-bottom: 5vh;
   grid-template-columns: repeat(2, 30vw);
   grid-auto-rows: 20vw;
   grid-gap: 10px; }
@@ -126,7 +127,7 @@ body {
 .about-skills,
 .about-education {
   width: 40vw;
-  height: 100vh; }
+  height: auto; }
 
 .about-me h1,
 .about-skills h1,
@@ -269,22 +270,19 @@ fieldset {
 .soMe {
   position: absolute;
   right: 20vw;
-  width: 8vw;
+  width: 6vw;
   height: auto; }
 
-#facebook-link {
-  top: 20vh; }
-
 #linkedin-link {
-  top: 40vh; }
+  top: 35vh; }
 
 #github-link {
-  top: 60vh; }
+  top: 50vh; }
 
 .project-main {
   width: 100vw;
   height: 100vh;
-  padding: 5%;
+  padding: 15%;
   padding-top: 10%;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -300,6 +298,11 @@ fieldset {
   .project-main p {
     grid-column: 1/6;
     font-size: 1.4rem; }
+  .project-main a {
+    grid-row: 6;
+    margin-right: 10%; }
+    .project-main a img {
+      width: 60%; }
 
 .project-page-img {
   width: 40vw;
@@ -312,7 +315,15 @@ fieldset {
 
 @media only screen and (max-width: 1200px) {
   :root {
-    font-size: 40%; } }
+    font-size: 40%; }
+  .project-main {
+    font-size: 60%; }
+    .project-main h1 {
+      font-size: 3.4rem; }
+    .project-main h2 {
+      font-size: 2.2rem; }
+    .project-main p {
+      font-size: 1.8rem; } }
 
 @media only screen and (max-width: 850px) {
   .email-container {
@@ -334,7 +345,17 @@ fieldset {
     left: 45vw; }
   #github-link {
     top: 80vh;
-    right: 15vw; } }
+    right: 15vw; }
+  .project-main {
+    display: block;
+    padding: 15%;
+    text-align: center; }
+    .project-main h1 {
+      margin-bottom: 8%; }
+    .project-main h2 {
+      margin-bottom: 5%; }
+    .project-main .project-page-img {
+      margin-bottom: 10%; } }
 
 @media only screen and (max-width: 725px) {
   :root {
@@ -346,8 +367,11 @@ fieldset {
     .gallery .project img {
       margin-top: 20%;
       margin-left: 10%; }
-  #logo_container img {
-    margin-top: 30%; }
+  #logo_container {
+    height: 80%;
+    margin-top: 15%; }
+    #logo_container img {
+      margin-top: 30%; }
   .main-about .about-img {
     display: none; }
   .main-about .about-skills div {
@@ -380,7 +404,22 @@ fieldset {
     .about-me .timeline,
     .about-skills .timeline,
     .about-education .timeline {
-      margin-left: 0; } }
+      margin-left: 0; }
+  .project-main {
+    display: block;
+    padding: 15%;
+    text-align: center; }
+    .project-main h1 {
+      margin-bottom: 8%;
+      font-size: 5rem; }
+    .project-main h2 {
+      font-size: 3rem;
+      margin-bottom: 5%; }
+    .project-main p {
+      font-size: 2rem; }
+    .project-main .project-page-img {
+      width: 60vw;
+      margin-bottom: 10%; } }
 
 @media only screen and (max-width: 500px) {
   :root {
@@ -390,4 +429,15 @@ fieldset {
   #intro-text h2 {
     line-height: 4.5rem; }
   .nav_link {
-    font-size: 2.8rem; } }
+    font-size: 2.8rem; }
+  .project-main h1 {
+    margin-bottom: 8%;
+    font-size: 7rem; }
+  .project-main h2 {
+    font-size: 5rem;
+    margin-bottom: 5%; }
+  .project-main p {
+    font-size: 3rem; }
+  .project-main .project-page-img {
+    width: 60vw;
+    margin-bottom: 10%; } }

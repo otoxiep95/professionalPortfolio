@@ -113,8 +113,7 @@ var title = document.querySelector("main h1");
 var secondTitle = document.querySelector("main h2");
 var text = document.querySelector("main p");
 var projImg = document.querySelector("main img");
-var projMain = document.querySelector("main");
-window.addEventListener("DOMContentLoaded", init);
+var projMain = document.querySelector("main"); //window.addEventListener("DOMContentLoaded", init);
 
 function init() {
   fetch("https://professionalportfolio.albertopachecommd.com/wp-json/wp/v2/galleryproject/" + id + "?_embed").then(function (e) {
@@ -133,6 +132,8 @@ function showSingleProject(data) {
   projImg.setAttribute("src", data._embedded["wp:featuredmedia"][0].media_details.sizes.full.source_url);
   text.innerHTML = data.content.rendered;
 }
+
+init();
 },{}],"../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -160,7 +161,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54232" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53829" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
