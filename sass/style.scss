@@ -13,6 +13,7 @@ body {
   margin: 0%;
   background-color: #f3f7ff;
   font-family: "Cousine", monospace;
+  transition: all 1s;
 }
 
 .gallery {
@@ -31,6 +32,7 @@ body {
     width: 100%;
     height: 100%;
     position: relative;
+    opacity: 0;
     //object-fit: contain;
     transition: opacity 0.5s ease;
 
@@ -93,6 +95,7 @@ body {
   height: 100%;
   grid-column: 2/-1;
   grid-row: 2;
+  opacity: 0;
 
   h2 {
     margin-left: 4%;
@@ -136,6 +139,22 @@ body {
   bottom: 0;
   text-align: center;
 }
+
+// .anim-slide {
+//   position: fixed;
+//   width: 0px;
+//   height: 100vh;
+//   top: 0;
+//   right: 0;
+//   background-color: #3d6bc9;
+// }
+// .transition-fade {
+//   transition: 0.4s;
+//   opacity: 1;
+// }
+// html.is-animating .transition-fade {
+//   opacity: 0;
+// }
 
 //ABOUT PAGE
 

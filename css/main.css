@@ -11,7 +11,8 @@ body {
   height: 100%;
   margin: 0%;
   background-color: #f3f7ff;
-  font-family: "Cousine", monospace; }
+  font-family: "Cousine", monospace;
+  transition: all 1s; }
 
 .gallery {
   display: grid;
@@ -28,6 +29,7 @@ body {
     width: 100%;
     height: 100%;
     position: relative;
+    opacity: 0;
     transition: opacity 0.5s ease; }
     .gallery .project .overlay {
       position: absolute;
@@ -72,7 +74,8 @@ body {
   width: 100%;
   height: 100%;
   grid-column: 2/-1;
-  grid-row: 2; }
+  grid-row: 2;
+  opacity: 0; }
   #intro-text h2 {
     margin-left: 4%;
     margin-top: 15%;

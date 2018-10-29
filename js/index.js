@@ -1,14 +1,54 @@
 "use strict";
 import anime from "animejs";
 
+// import Swupjs from "swupjs";
+// const swupjs = new Swupjs(options);
+
+// let options = {
+//   animations: {
+//     "*": {
+//       in: function(next) {
+//         document.querySelector("#swup").style.opacity = 0;
+//         anime({
+//           targets: "#swup",
+//           opacity: 1,
+//           duration: 10000,
+//           complete: next
+//         });
+//       },
+//       out: function(next) {
+//         document.querySelector("#swup").style.opacity = 1;
+//         anime({
+//           targets: "#swup",
+//           opacity: 0,
+//           duration: 10000,
+//           complete: next
+//         });
+//       }
+//     }
+//   }
+// };
+
 const projectTemplate = document.querySelector("template").content;
 const projectList = document.querySelector(".gallery");
+const frontText = document.querySelector("#intro-text");
 
 window.addEventListener("DOMContentLoaded", init);
 
 function init() {
   animeLogo();
   fetchData();
+  animateFrontText();
+}
+
+function animateFrontText() {
+  anime({
+    targets: frontText,
+    translateX: [-30, 30],
+    opacity: 1,
+    duration: 2000,
+    delay: 2500
+  });
 }
 
 function animeLogo() {
@@ -17,6 +57,7 @@ function animeLogo() {
     strokeDashoffset: [anime.setDashoffset, 0],
     easing: "easeInOutSine",
     duration: 1500,
+    delay: 500,
     direction: "alternate",
     loop: false
   });
@@ -59,15 +100,18 @@ function buildGallery(data) {
     console.log(clone.querySelector(".overlay-txt h2"));
     clone.querySelector(".overlay-txt h2").textContent = project.title.rendered;
     let dowloadingImage = new Image();
+    let cloneImg = clone.querySelector(".project-img");
     dowloadingImage.onload = function() {
       if (project._embedded["wp:featuredmedia"]) {
         //img is there
-        clone.querySelector(".project-img").setAttribute("src", this.src);
-        projectList.appendChild(clone);
-        // anime({
-        //   targets: projectBox,
+        cloneImg.setAttribute("src", this.src);
 
-        // });
+        anime({
+          targets: projectBox,
+          opacity: "1",
+          duration: 1000,
+          delay: 2500
+        });
       } else {
         // no img
         clone.querySelector("img").remove();
@@ -84,5 +128,7 @@ function buildGallery(data) {
     clone.querySelector(".overlay").style.backgroundColor =
       project.acf.backgroundcolor;
     clone.querySelector("a").href = "projectpage.html?id=" + project.id;
+    projectList.appendChild(clone);
   });
 }
+//init();

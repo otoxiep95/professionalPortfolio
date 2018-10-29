@@ -113,7 +113,7 @@ var title = document.querySelector("main h1");
 var secondTitle = document.querySelector("main h2");
 var text = document.querySelector("main p");
 var projImg = document.querySelector("main img");
-var projMain = document.querySelector("main"); //window.addEventListener("DOMContentLoaded", init);
+var projMain = document.querySelector("body"); //window.addEventListener("DOMContentLoaded", init);
 
 function init() {
   fetch("https://professionalportfolio.albertopachecommd.com/wp-json/wp/v2/galleryproject/" + id + "?_embed").then(function (e) {
@@ -161,7 +161,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53829" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50049" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

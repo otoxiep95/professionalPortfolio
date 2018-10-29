@@ -147,13 +147,51 @@ var _animejs = _interopRequireDefault(require("animejs"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+// import Swupjs from "swupjs";
+// const swupjs = new Swupjs(options);
+// let options = {
+//   animations: {
+//     "*": {
+//       in: function(next) {
+//         document.querySelector("#swup").style.opacity = 0;
+//         anime({
+//           targets: "#swup",
+//           opacity: 1,
+//           duration: 10000,
+//           complete: next
+//         });
+//       },
+//       out: function(next) {
+//         document.querySelector("#swup").style.opacity = 1;
+//         anime({
+//           targets: "#swup",
+//           opacity: 0,
+//           duration: 10000,
+//           complete: next
+//         });
+//       }
+//     }
+//   }
+// };
 var projectTemplate = document.querySelector("template").content;
 var projectList = document.querySelector(".gallery");
+var frontText = document.querySelector("#intro-text");
 window.addEventListener("DOMContentLoaded", init);
 
 function init() {
   animeLogo();
   fetchData();
+  animateFrontText();
+}
+
+function animateFrontText() {
+  (0, _animejs.default)({
+    targets: frontText,
+    translateX: [-30, 30],
+    opacity: 1,
+    duration: 2000,
+    delay: 2500
+  });
 }
 
 function animeLogo() {
@@ -162,6 +200,7 @@ function animeLogo() {
     strokeDashoffset: [_animejs.default.setDashoffset, 0],
     easing: "easeInOutSine",
     duration: 1500,
+    delay: 500,
     direction: "alternate",
     loop: false
   });
@@ -200,14 +239,18 @@ function buildGallery(data) {
     console.log(clone.querySelector(".overlay-txt h2"));
     clone.querySelector(".overlay-txt h2").textContent = project.title.rendered;
     var dowloadingImage = new Image();
+    var cloneImg = clone.querySelector(".project-img");
 
     dowloadingImage.onload = function () {
       if (project._embedded["wp:featuredmedia"]) {
         //img is there
-        clone.querySelector(".project-img").setAttribute("src", this.src);
-        projectList.appendChild(clone); // anime({
-        //   targets: projectBox,
-        // });
+        cloneImg.setAttribute("src", this.src);
+        (0, _animejs.default)({
+          targets: projectBox,
+          opacity: "1",
+          duration: 1000,
+          delay: 2500
+        });
       } else {
         // no img
         clone.querySelector("img").remove();
@@ -219,8 +262,9 @@ function buildGallery(data) {
     clone.querySelector(".project").style.backgroundColor = project.acf.backgroundcolor;
     clone.querySelector(".overlay").style.backgroundColor = project.acf.backgroundcolor;
     clone.querySelector("a").href = "projectpage.html?id=" + project.id;
+    projectList.appendChild(clone);
   });
-}
+} //init();
 },{"animejs":"node_modules/animejs/anime.min.js"}],"../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -248,7 +292,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53829" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50049" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

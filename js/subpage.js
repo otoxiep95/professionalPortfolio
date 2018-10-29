@@ -7,7 +7,7 @@ const title = document.querySelector("main h1");
 const secondTitle = document.querySelector("main h2");
 const text = document.querySelector("main p");
 const projImg = document.querySelector("main img");
-const projMain = document.querySelector("main");
+const projMain = document.querySelector("body");
 
 //window.addEventListener("DOMContentLoaded", init);
 function init() {
@@ -27,6 +27,7 @@ function showSingleProject(data) {
   console.log(data.acf.backgroundcolor);
   //   document.querySelector("body").style.backgroundColor =
   //     data.acf.backgroundColour;
+
   projMain.style.backgroundColor = data.acf.backgroundcolor;
   projImg.setAttribute(
     "src",
